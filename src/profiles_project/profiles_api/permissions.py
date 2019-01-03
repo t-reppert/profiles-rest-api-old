@@ -12,6 +12,7 @@ class UpdateOwnProfile(permissions.BasePermission):
 
         return obj.id == request.user.id
 
+
 class PostOwnStatus(permissions.BasePermission):
     """Allow users to update their own status."""
 
@@ -22,4 +23,3 @@ class PostOwnStatus(permissions.BasePermission):
             return True
 
         return obj.user_profile.id == request.user.id
-        

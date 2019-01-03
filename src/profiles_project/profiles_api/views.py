@@ -14,6 +14,7 @@ from rest_framework.permissions import IsAuthenticated
 from . import serializers
 from . import models
 from . import permissions
+
 # Create your views here.
 
 class HelloApiView(APIView):
@@ -122,6 +123,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     filter_backends = (filters.SearchFilter,)
     search_fields = ('name', 'email',)
 
+
 class LoginViewSet(viewsets.ViewSet):
     """Checks email and password and returns an auth token."""
 
@@ -131,6 +133,7 @@ class LoginViewSet(viewsets.ViewSet):
         """Use the ObtainAuthToken APIView to validate and create a token."""
 
         return ObtainAuthToken().post(request)
+
 
 class UserProfileFeedViewSet(viewsets.ModelViewSet):
     """Handles creating, reading, and updating profile feed items."""
