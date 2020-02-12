@@ -22,7 +22,7 @@
                 "sha256:372faee5b93c92f19e9d65f52b278a1b689d3e3b4a7d9d30db73a78ebc729770"
             ],
             "index": "pypi",
-            "version": "==1.11.27"
+            "version": "==1.11.28"
         },
         "djangorestframework": {
             "hashes": [
